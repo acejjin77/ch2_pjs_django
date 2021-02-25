@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import pymysql
-import my_settings
+from mysite import my_settings
 
 pymysql.install_as_MySQLdb()
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -28,7 +28,7 @@ SECRET_KEY = '4gjhq_j(tp_rt(#6a35#r=l(+^f%akzf7kz-rq)rgf=0927&-6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '3.34.146.188']
 
 # Application definition
 

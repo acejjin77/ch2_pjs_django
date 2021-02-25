@@ -5,10 +5,10 @@ from photo.fields import ThumbnailImageField
 
 class Album(models.Model):
     name = models.CharField(max_length=30)
-    desciption = models.CharField('One Line Desciption', max_length=100, blank=True)
+    description = models.CharField('One Line Desciption', max_length=100, blank=True)
 
     class Meta:
-        ordering = ('name')
+        ordering = ('name',)
 
     def __str__(self):
         return self.name
@@ -20,12 +20,12 @@ class Album(models.Model):
 class Photo(models.Model):
     album = models.ForeignKey(Album, on_delete=models.CASCADE)
     title = models.CharField('TITLE', max_length=30)
-    description = models.CharField('Photo Description', blank=True)
+    description = models.TextField('Photo Description', blank=True)
     image = ThumbnailImageField(upload_to='photo/%Y/%m')
     upload_dt = models.DateTimeField('Upload Date', auto_now_add=True)
 
     class Meta:
-        ordering = ('title')
+        ordering = ('title',)
 
     def __str__(self):
         return self.title
