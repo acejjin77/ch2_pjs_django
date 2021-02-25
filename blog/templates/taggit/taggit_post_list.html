@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    taggit_post_list.html
+{% endblock %}
+
+{% block content %}
+    <h1>Posts for tag - {{ tagname }}</h1>
+    <br/>
+
+    {% for object in object_list %}
+        <h2><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></h2>
+        {{ object.modify_dt|date:"N d, Y" }}
+        <p>{{ object.description }}</p>
+    {% endfor %}
+
+{% endblock %}
