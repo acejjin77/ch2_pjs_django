@@ -10,7 +10,10 @@
 
     <ul>
         {% for bookmark in object_list %}
-            <li><a href="{% url 'bookmark:detail' bookmark.id %}">{{ bookmark }}</a></li>
+            <li><a href="{{ bookmark.url }}">{{ bookmark }}</a></li>
         {% endfor %}
     </ul>
+    <br/>
+
+    <button type="button" onclick="{% url 'bookmark:add' %}">Add bookmark</button>
 {% endblock %}

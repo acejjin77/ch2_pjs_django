@@ -6,5 +6,5 @@ class BookmarkLV(ListView):
     model = Bookmark
 
 
-class BookmarkDV(DetailView):
+class BookmarkAdd(DetailView):
     model = Bookmark
