@@ -25,4 +25,4 @@ urlpatterns = [
                   path('bookmark/', include('bookmark.urls')),
                   path('blog/', include('blog.urls')),
                   path('photo/', include('photo.urls')),
-              ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

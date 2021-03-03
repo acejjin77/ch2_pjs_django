@@ -1,4 +1,4 @@
-from django.views.generic import ListView, DetailView, TemplateView, FormView
+from django.views.generic import ListView, DetailView
 from photo.models import Album, Photo
 
 class AlbumLV(ListView):

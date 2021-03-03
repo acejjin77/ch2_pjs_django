@@ -2,7 +2,7 @@ from django.urls import path
 from photo import views
 
 app_name = 'photo'
-url_patterns = [
+urlpatterns = [
     path('', views.AlbumLV.as_view(), name='index'),
     path('album/', views.AlbumLV.as_view(), name='album_list'),
     path('album/<int:pk>', views.AlbumDV.as_view(), name='album_detail'),
