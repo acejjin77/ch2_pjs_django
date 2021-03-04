@@ -28,7 +28,7 @@ SECRET_KEY = '4gjhq_j(tp_rt(#6a35#r=l(+^f%akzf7kz-rq)rgf=0927&-6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '3.34.146.188']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '3.34.146.188', 'pjs.ggu.la']
 
 # Application definition
 
