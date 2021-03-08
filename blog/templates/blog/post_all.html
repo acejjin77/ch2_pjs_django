@@ -29,4 +29,8 @@
         {% endif %}
     </span>
     </div>
+
+    <br/>
+    <a href="{% url "blog:add" %}" class="btn btn-primary" role="button">Add Post</a>
+    <a href="{% url "blog:change" %}" class="btn btn-primary" role="button">Update Post</a>
 {% endblock %}

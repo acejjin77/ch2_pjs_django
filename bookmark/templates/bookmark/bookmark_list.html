@@ -15,5 +15,6 @@
     </ul>
     <br/>
 
-    <button type="button" onclick="{% url 'bookmark:add' %}">Add bookmark</button>
+    <a href="{% url "bookmark:add" %}" class="btn btn-primary" role="button">Add Bookmark</a>
+    <a href="{% url "bookmark:change" %}" class="btn btn-primary" role="button">Update Bookmark</a>
 {% endblock %}
