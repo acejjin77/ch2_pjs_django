@@ -27,7 +27,7 @@ class ThumbnailImageFieldFile(ImageFieldFile):
         size = (self.field.thumb_width, self.field.thumb_height)
         img.thumbnail(size)
         background = Image.new('RGB', size, (255, 255, 255))
-        box = (int((size[0]-img.size[0])/2), int((size[1]-img.size[1])/2))
+        box = (int((size[0] - img.size[0]) / 2), int((size[1] - img.size[1]) / 2))
         background.paste(img, box)
         background.save(self.thumb_path, 'JPEG')
 
@@ -43,4 +43,3 @@ class ThumbnailImageField(ImageField):
     def __init__(self, verbose_name=None, thumb_width=128, thumb_height=128, **kwargs):
         self.thumb_width, self.thumb_height = thumb_width, thumb_height
         super().__init__(verbose_name, **kwargs)
-
