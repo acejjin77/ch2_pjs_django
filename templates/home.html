@@ -6,16 +6,6 @@
 
 {% block extra-style %}
     <style type="text/css">
-        .home-image {
-            background-image: url("{% static 'img/pikacu.jpg' %}");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 100%;
-            height: 500px;
-            border-bottom: 10px solid #ccc;
-            padding: 20px 0 0 20px;
-        }
-
         .title {
             color: #cc8800;
             font-weight: bold;
@@ -32,31 +22,37 @@
 {% endblock %}
 
 {% block content %}
-    <div class="home-image">
-        <h2 class="title">Django - python Web Programming</h2>
-        <h4 class="powered"><i class="fas fa-arrow-circle-right"></i>powered by Django and Bootstrap </h4>
-    </div>
+    <h2 class="title">map</h2>
+    <div id="map" style="width:100%;height:400px;"></div>
+
 
     <hr style="margin: 20px 0;">
 
     <div class="row text-center">
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <h3>Bookmark App</h3>
-            <p>Bookmark is a Uniform Resource Identifier (URI) that is stored for later retrieval in any of various
-                storage formats
-                You can store your own bookmarks by Bookmark application. It's also possible to update or delete your
-                bookmarks.s</p>
+            <p>원하는 북마크로 빠른 이동 (관리자 기준)</p>
         </div>
-        <div class="col-sm-6">
-            <h3>Blog App</h3>
-            <p>This application makes it possible to log daily events or write your own interests such as hobbies,
-                techniques, etc.
-                A typical blog combines text, digital images, and links to other blogs, web pages. and other media
-                related to its topic.</p>
+        <div class="col-sm-4">
+            <h3>Post App</h3>
+            <p>필요한 게시물 여러개 올릴 예정</p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Corona map</h3>
+            <p>코로나 확진자 판정을 받은 인원의 최근 14일 위치와 선택한 위치별로 확진자들의 치료 여부(백신)를 나타내 드립니다.</p>
         </div>
     </div>
 {% endblock %}
 
-{% block footer %}
 
+{% block extra-script %}
+    <script>
+        var mapOptions = {
+            center: new naver.maps.LatLng(37.3595704, 127.105399),
+            zoom: 10
+        };
+
+        var map = new naver.maps.Map('map', mapOptions);
+    </script>
 {% endblock %}
+

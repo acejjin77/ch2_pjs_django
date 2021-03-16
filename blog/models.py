@@ -16,7 +16,7 @@ class Post(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='OWNER', blank=True, null=True)
 
     class Meta:
-        verbose_name = 'post'
+        verbose_name = 'blog'
         verbose_name_plural = 'posts'
         db_table = 'blog_posts'
         ordering = ('-modify_dt',)

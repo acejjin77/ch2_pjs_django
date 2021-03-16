@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                 ('modify_dt', models.DateTimeField(auto_now=True, verbose_name='MODIFY DATE')),
             ],
             options={
-                'verbose_name': 'post',
+                'verbose_name': 'blog',
                 'verbose_name_plural': 'posts',
                 'db_table': 'blog_posts',
                 'ordering': ('-modify_dt',),
